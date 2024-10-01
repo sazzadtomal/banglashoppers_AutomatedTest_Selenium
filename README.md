@@ -4,6 +4,24 @@ This repository houses automated test scripts leveraging Selenium WebDriver to v
 
 ## Getting Started
 
+
+### Test Document
+
+Test Document can be found in `./TestDocument/BanglashoppersAutomatedTestingDocument.xlsx`
+
+
+### Technologies Used
+
+This project utilizes the following technologies:
+
+- **Selenium WebDriver**: Used for automating web application testing and interacting with browsers.
+- **Java**: The primary programming language for writing the test scripts.
+- **TestNG**: Framework used for structuring and managing test cases, and generating reports.
+- **Maven**: Used as the build automation tool for managing dependencies and executing tests.
+- **Git**: Version control system for tracking changes and collaboration.
+- **ChromeDriver**: WebDriver implementation for automating Chrome browser interactions.
+
+
 ### Prerequisites
 
 * **Programming Language:** Java (version 8 or later recommended)
