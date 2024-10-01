@@ -14,7 +14,35 @@ This repository houses automated test scripts leveraging Selenium WebDriver to v
 
 ### Running the tests
 
-1.
+Execute the test by running command: 
+   ```bash
+      mvn test
+   ```
+This command runs the custom configured testing.xml file via the <b>Maven Surefire Plugin.</b>
 
+### HTML Report Generation
+Generate HTML report by running command:
+```bash
+   allure generate ./allure-results
+```
 
+Html Test report can be found at `./allure-report`
 
+### Open HTML Report
+Open HTML report by running command:
+```bash
+   allure open ./allure-report
+```
+
+<b>Then, open the link given at the command line.</b>
+
+### <b><u>Report Screenshots</u></b>
+
+#### Overview
+![Dashboard](https://img001.prntscr.com/file/img001/__b_9dLbSUODlVcAzV6yPw.png)
+
+#### Functional Tests
+![FunctionalTests](https://img001.prntscr.com/file/img001/vlCKfrbsRAGjTy7AvZU98w.png)
+
+#### UI Tests
+![UITests](https://img001.prntscr.com/file/img001/vlCKfrbsRAGjTy7AvZU98w.png)

@@ -102,12 +102,12 @@ public class BasePage {
 
     public void validateElementBackgroundColor(By locator,String color){
         String bgColor=getElement(locator).getCssValue("background-color");
-        Assert.assertTrue(validateColor(bgColor,color));
+        Assert.assertEquals(Color.fromString(bgColor).asHex(),Color.fromString(color).asHex());
     }
 
     public void validateElementColor(By locator,String color){
-        String actialColor=getElement(locator).getCssValue("color");
-        Assert.assertTrue(validateColor(actialColor,color));
+        String actualColor=getElement(locator).getCssValue("color");
+        Assert.assertEquals(Color.fromString(actualColor).asHex(),Color.fromString(color).asHex());
     }
 
 
@@ -125,9 +125,9 @@ public class BasePage {
         Actions actions=new Actions(getDriver());
         WebElement element=getElement(locator);
         actions.moveToElement(element).build().perform();
-        Thread.sleep(500);
+        Thread.sleep(1000);
         String afterHoverBg=getElement(locator).getCssValue(typeofColor);
-        Assert.assertTrue(validateColor(afterHoverBg,afterHover));
+        Assert.assertEquals(Color.fromString(afterHoverBg).asHex(),Color.fromString(afterHover).asHex());
     }
 
 
@@ -136,7 +136,7 @@ public class BasePage {
         WebElement element=getElement(locator);
         actions.moveToElement(element).build().perform();
 
-        Thread.sleep(500);
+        Thread.sleep(1000);
         String actualAfter=getElement(locator).getCssValue("opacity");
         Assert.assertEquals(actualAfter,afterHover);
     }
