@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="methods" thread-count="4">
+    <test verbose="2" preserve-order="true" name="D:/Java/Selenium/BanglaShoppers/src/test/java/testcases/Login">
+        <classes>
+            <class name="testcases.Login.LoginFunctionalTest">
+                <methods>
+                    <include name="loginWithRegisteredEmailAndCorrectPassword"/>
+                    <include name="loginWithUnregisteredButValidCredentials"/>
+                    <include name="loginWithRegisteredEmailButWrongPassword"/>
+                    <include name="loginWithBlankAndInvalidCredentials"/>
+                    <include name="modalClosingByBackdrop"/>
+                    <include name="modalClosingByCloseButton"/>
+                </methods>
+            </class>
+            <class name="testcases.Login.LoginUITest">
+                <methods>
+                    <include name="modalIsVisible"/>
+                    <include name="modalBackgroundColorIsValid"/>
+                    <include name="backDropIsVisible"/>
+                    <include name="fontFamily"/>
+                    <include name="loginHeadingShowingProperly"/>
+                    <include name="loginSubHeadingShowingProperly"/>
+                    <include name="emailFieldValidation"/>
+                    <include name="emailLabelValidation"/>
+                    <include name="passwordFieldValidation"/>
+                    <include name="passwordLabelValidation"/>
+                    <include name="loginButtonValidation"/>
+                    <include name="oauthButtonValidation"/>
+                    <include name="forgotPasswordValidation"/>
+                    <include name="registerButtonValidation"/>
+                    <include name="closeModalButtonValidation"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

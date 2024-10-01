@@ -22,7 +22,7 @@ public class LoginFunctionalTest extends DriverSetup {
 
     //both valid but registered and unregistered
     @Test
-    public void loginWithRegisteredCredentials(){
+    public void loginWithRegisteredEmailAndCorrectPassword(){
         loginpage.getElement(loginpage.emailInput).sendKeys("frotesting@gmail.com");
         loginpage.getElement(loginpage.passwordInput).sendKeys("FroTesting123$$$");
         loginpage.clickOnElement(loginpage.loginButton);
@@ -30,7 +30,7 @@ public class LoginFunctionalTest extends DriverSetup {
     }
 
     @Test
-    public void loginWithUnregisteredCredentials(){
+    public void loginWithUnregisteredButValidCredentials(){
         loginpage.getElement(loginpage.emailInput).sendKeys("frotestingnotregistered@gmail.com");
         loginpage.getElement(loginpage.passwordInput).sendKeys("FroTesting123$$$");
         loginpage.clickOnElement(loginpage.loginButton);
@@ -38,7 +38,7 @@ public class LoginFunctionalTest extends DriverSetup {
     }
 
     @Test
-    public void loginWithWrongPassword(){
+    public void loginWithRegisteredEmailButWrongPassword(){
         loginpage.getElement(loginpage.emailInput).sendKeys("frotesting@gmail.com");
         loginpage.getElement(loginpage.passwordInput).sendKeys("wrongpassword123$$$");
         loginpage.clickOnElement(loginpage.loginButton);
@@ -72,48 +72,21 @@ public class LoginFunctionalTest extends DriverSetup {
 
 
     @Test
-    public void backDropClosingByBackdrop() throws InterruptedException {
+    public void modalClosingByBackdrop() throws InterruptedException {
         loginpage.clickOnElement(loginpage.backDrop);
-        boolean shown=loginpage.getElement(loginpage.hiddenModal).isDisplayed();
+        Thread.sleep(1000);
+        boolean shown=loginpage.getElement(loginpage.modal).isDisplayed();
         Assert.assertFalse(shown);
     }
 
 
     @Test
-    public void backDropClosingByCloseButton() throws InterruptedException {
+    public void modalClosingByCloseButton() throws InterruptedException {
         loginpage.clickOnElement(loginpage.closeModal);
-        boolean shown=loginpage.getElement(loginpage.hiddenModal).isDisplayed();
+        Thread.sleep(1000);
+        boolean shown=loginpage.getElement(loginpage.modal).isDisplayed();
         Assert.assertFalse(shown);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

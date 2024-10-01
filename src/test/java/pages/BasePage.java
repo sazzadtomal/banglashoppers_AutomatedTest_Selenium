@@ -123,7 +123,8 @@ public class BasePage {
 
     public void validateButtonHoveringColor(By locator,String typeofColor,String afterHover) throws InterruptedException {
         Actions actions=new Actions(getDriver());
-        actions.moveToElement(getElement(locator)).build().perform();
+        WebElement element=getElement(locator);
+        actions.moveToElement(element).build().perform();
         Thread.sleep(500);
         String afterHoverBg=getElement(locator).getCssValue(typeofColor);
         Assert.assertTrue(validateColor(afterHoverBg,afterHover));
@@ -132,7 +133,9 @@ public class BasePage {
 
     public void validateButtonHoveringOpacity(By locator,String afterHover) throws InterruptedException {
         Actions actions=new Actions(getDriver());
-        actions.moveToElement(getElement(locator)).build().perform();
+        WebElement element=getElement(locator);
+        actions.moveToElement(element).build().perform();
+
         Thread.sleep(500);
         String actualAfter=getElement(locator).getCssValue("opacity");
         Assert.assertEquals(actualAfter,afterHover);

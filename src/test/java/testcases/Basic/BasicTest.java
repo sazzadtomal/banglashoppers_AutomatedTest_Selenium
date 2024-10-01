@@ -20,6 +20,5 @@ public class BasicTest extends DriverSetup {
     public void locateWithWebdriverWait(){
         getDriver().get("https://www.banglashoppers.com/");
         getDriver().findElement(By.xpath("//lala"));
-//       page.getElement(By.xpath("//lala"));
     }
 }

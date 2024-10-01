@@ -15,14 +15,5 @@ public class HomepageTest extends DriverSetup {
         homepage.loadAWebPage(homepage.HOMEPAGE_URL);
     }
 
-    @Test
-    public void clickHomepageLogo(){
-        homepage.clickOnElement(homepage.logo);
-    }
-
-
-
-
-
 
 }

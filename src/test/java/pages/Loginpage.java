@@ -1,12 +1,13 @@
 package pages;
 
 import org.openqa.selenium.By;
-import org.testng.annotations.BeforeMethod;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Loginpage extends BasePage {
 
-    public By visibleModal =By.xpath("//div[@id='sm-social-login']");
-    public By hiddenModal =By.xpath("//div[@id='sm-social-login'][contains(@class,'mfp-hide')]");
+    public By modal =By.xpath("//div[@id='sm-social-login']");
     public By backDrop=By.xpath("//div[@class='mfp-container mfp-s-ready mfp-inline-holder']");
     public By loginHeading=By.xpath("//div[normalize-space()='Welcome! Please Login to continue.']");
     public By subHeading=By.xpath("//div[@class='register-link']");
@@ -27,7 +28,30 @@ public class Loginpage extends BasePage {
 
 
 
+
+
     public Homepage homepage=new Homepage();
+
+
+    public Map<String,String> getGeneralFontCSS (){
+        Map<String, String> expectedStyles = new HashMap<>();
+        expectedStyles.put("font-style", "normal");
+        expectedStyles.put("font-weight", "400");
+        expectedStyles.put("text-align", "left");
+        return expectedStyles;
+    }
+
+
+    public Map<String,String> getGeneralFontCSSCenter (){
+        Map<String, String> expectedStyles = new HashMap<>();
+        expectedStyles.put("font-style", "normal");
+        expectedStyles.put("font-weight", "400");
+        expectedStyles.put("text-align", "center");
+        return expectedStyles;
+    }
+
+
+
     public void openLoginModal(){
         homepage.loadAWebPage(homepage.HOMEPAGE_URL);
         homepage.clickOnElement(homepage.login);
