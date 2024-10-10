@@ -63,4 +63,4 @@ Open HTML report by running command:
 ![FunctionalTests](https://img001.prntscr.com/file/img001/vlCKfrbsRAGjTy7AvZU98w.png)
 
 #### UI Tests
-![UITests](https://img001.prntscr.com/file/img001/vlCKfrbsRAGjTy7AvZU98w.png)
+![AutomatedUITest](https://github.com/user-attachments/assets/cc725565-ce55-41a0-bb0e-12b5ff3115bb)
